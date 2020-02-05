@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task-container{
+  display: flex;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 1px solid rgba(61, 61, 61, 0.2) ;
+  border-radius: 10px;
+  box-shadow:         0px 5px 12px 0px rgba(61, 61, 61, 0.5);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.task_item_container{
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  height: 100%;
+  max-width: 300px;
+  flex-direction: column
 }
+.task_item{
+  margin: 5px;
+  overflow: hidden;
+  text-align: left;
+  max-height: 50px;
+}
+.task-header{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 20px auto 20px;
+}
+.modal-container{
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  left: 40%;
+  top: 33%;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  background: #fbfafb;
+  border-radius: 10px;
+  z-index: 10;
+}
+.modal-form{
   display: flex;
   flex-direction: column;
+}
+.main-content{
+  height: 100%;
+}
+.sidebar-wrapper{
+  width: 400px;
+  height: 100vh;
+  background-color: #dbd7dd;
+}
+.sidebar-title{
+  font-size: 18px;
+  padding: 30px;
   align-items: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #fbf7fd;
+}
+.sidebar-content{
+  margin: 10px;
+  word-break: break-all;
+}
+.modal_input{
+  width: 80%;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e9e9e9;
+  margin: 10px auto;
+}
+.add-button{
+  width: 140px;
+  height: 40px;
+  border: none;
+  background-color: #2525fb;
+  box-shadow: 0px 5px 12px 0px rgba(37, 37, 251, 0.5);
+  text-transform: uppercase;
   color: white;
+  border-radius: 30px;
+  font-weight: 700;
+  transition: all 0.3s;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.add-button:hover{
+  background-color: #070d80;
+  color: white;
+  transform: scale(1.2,1.2);
 }
+.add-button:focus {
+  outline-style: none;
+  outline-width: 0px !important;
+  outline-color: unset !important;
+}
+.tasks-holder{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.task_button{
+  border: none;
+  width: 90px;
+  border-radius: 30px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+.task_button:hover{
+  transform: scale(1.2,1.2);
+}
+.task_button:focus {
+  outline-style: none;
+  outline-width: 0px !important;
+  outline-color: unset !important;
+}
+.red{
+  background-color: #c02f26;
+}
+.blue{
+  background-color: #2525fb;
+}
+.modal-wrapper{
+  position: absolute;
+  width: 100%;
+  height: 100%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.modal-layout{
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+.modal_button{
+  width: 100px;
+  height: 40px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+}
+.modal_button:hover{
+  transform: scale(1.2,1.2);
+}
+.modal_button:focus {
+  outline-style: none;
+  outline-width: 0px !important;
+  outline-color: unset !important;
+}
+.task-item_header{
+  padding: 10px;
+  background-color: rgba(176, 176, 176, 0.75);
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0px 3px 2px 0px rgba(176, 176, 176, 0.45);
+}
+.task_item_container_buttons{
+  display: flex;
 }
