@@ -58,6 +58,7 @@
   height: 100%;
 }
 .sidebar-wrapper{
+  position: absolute;
   width: 400px;
   height: 100vh;
   background-color: #dbd7dd;
